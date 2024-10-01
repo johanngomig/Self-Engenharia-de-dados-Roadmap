@@ -1,3 +1,5 @@
+-- Criação das tabelas
+
 CREATE TABLE CLIENTES (
     nome				varchar(250) NOT NULL,
     data_nascimento	date NOT NULL,
