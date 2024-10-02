@@ -1,0 +1,14 @@
+[2024-10-02T19:30:32.841+0000] {processor.py:161} INFO - Started process (PID=5438) to work on /opt/airflow/dags/etl_pipeline_agrupar_continente.py
+[2024-10-02T19:30:32.841+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline_agrupar_continente.py for tasks to queue
+[2024-10-02T19:30:32.842+0000] {logging_mixin.py:188} INFO - [2024-10-02T19:30:32.842+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline_agrupar_continente.py
+[2024-10-02T19:30:32.853+0000] {logging_mixin.py:188} INFO - [2024-10-02T19:30:32.850+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/etl_pipeline_agrupar_continente.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_pipeline_agrupar_continente.py", line 2, in <module>
+    from airflow.operators.python.PythonOperator import PythonOperator
+ModuleNotFoundError: No module named 'airflow.operators.python.PythonOperator'; 'airflow.operators.python' is not a package
+[2024-10-02T19:30:32.855+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_pipeline_agrupar_continente.py
+[2024-10-02T19:30:32.869+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline_agrupar_continente.py took 0.033 seconds

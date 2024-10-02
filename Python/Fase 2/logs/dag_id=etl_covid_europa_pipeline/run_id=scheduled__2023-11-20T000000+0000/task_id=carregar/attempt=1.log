@@ -1,0 +1,40 @@
+[2024-10-02T18:58:22.056+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T18:58:22.091+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.carregar scheduled__2023-11-20T00:00:00+00:00 [queued]>
+[2024-10-02T18:58:22.479+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.carregar scheduled__2023-11-20T00:00:00+00:00 [queued]>
+[2024-10-02T18:58:22.481+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T18:58:22.591+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): carregar> on 2023-11-20 00:00:00+00:00
+[2024-10-02T18:58:22.604+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_covid_europa_pipeline', 'carregar', 'scheduled__2023-11-20T00:00:00+00:00', '--job-id', '1141', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmp3dp675ob']
+[2024-10-02T18:58:22.607+0000] {standard_task_runner.py:91} INFO - Job 1141: Subtask carregar
+[2024-10-02T18:58:22.608+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=5784) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T18:58:22.609+0000] {standard_task_runner.py:63} INFO - Started process 5809 to run task
+[2024-10-02T18:58:22.703+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_covid_europa_pipeline.carregar scheduled__2023-11-20T00:00:00+00:00 [running]> on host 99de7dfc3871
+[2024-10-02T18:58:22.840+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_covid_europa_pipeline' AIRFLOW_CTX_TASK_ID='carregar' AIRFLOW_CTX_EXECUTION_DATE='2023-11-20T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-11-20T00:00:00+00:00'
+[2024-10-02T18:58:22.847+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T18:58:22.946+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-02T18:58:22.947+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T18:58:22.960+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_covid_europa_pipeline, task_id=carregar, run_id=scheduled__2023-11-20T00:00:00+00:00, execution_date=20231120T000000, start_date=20241002T185822, end_date=20241002T185822
+[2024-10-02T18:58:23.046+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-02T18:58:23.079+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T18:58:23.097+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-02T19:24:31.137+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T19:24:31.179+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.carregar scheduled__2023-11-20T00:00:00+00:00 [queued]>
+[2024-10-02T19:24:31.198+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.carregar scheduled__2023-11-20T00:00:00+00:00 [queued]>
+[2024-10-02T19:24:31.199+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T19:24:31.491+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): carregar> on 2023-11-20 00:00:00+00:00
+[2024-10-02T19:24:31.501+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=9124) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T19:24:31.505+0000] {standard_task_runner.py:63} INFO - Started process 9144 to run task
+[2024-10-02T19:24:31.506+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_covid_europa_pipeline', 'carregar', 'scheduled__2023-11-20T00:00:00+00:00', '--job-id', '2144', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpulga6aco']
+[2024-10-02T19:24:31.508+0000] {standard_task_runner.py:91} INFO - Job 2144: Subtask carregar
+[2024-10-02T19:24:31.572+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_covid_europa_pipeline.carregar scheduled__2023-11-20T00:00:00+00:00 [running]> on host 99de7dfc3871
+[2024-10-02T19:24:31.676+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_covid_europa_pipeline' AIRFLOW_CTX_TASK_ID='carregar' AIRFLOW_CTX_EXECUTION_DATE='2023-11-20T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-11-20T00:00:00+00:00'
+[2024-10-02T19:24:31.678+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T19:24:31.753+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-02T19:24:31.754+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T19:24:31.765+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_covid_europa_pipeline, task_id=carregar, run_id=scheduled__2023-11-20T00:00:00+00:00, execution_date=20231120T000000, start_date=20241002T192431, end_date=20241002T192431
+[2024-10-02T19:24:31.800+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-02T19:24:31.826+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T19:24:31.832+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

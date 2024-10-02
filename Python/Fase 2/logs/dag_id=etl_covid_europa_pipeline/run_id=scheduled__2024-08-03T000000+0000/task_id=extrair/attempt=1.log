@@ -1,0 +1,60 @@
+[2024-10-02T17:30:54.046+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T17:30:54.068+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [queued]>
+[2024-10-02T17:30:54.074+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [queued]>
+[2024-10-02T17:30:54.075+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T17:30:54.235+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extrair> on 2024-08-03 00:00:00+00:00
+[2024-10-02T17:30:54.240+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2868) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T17:30:54.241+0000] {standard_task_runner.py:63} INFO - Started process 2871 to run task
+[2024-10-02T17:30:54.241+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_covid_europa_pipeline', 'extrair', 'scheduled__2024-08-03T00:00:00+00:00', '--job-id', '548', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpbnjnapj3']
+[2024-10-02T17:30:54.242+0000] {standard_task_runner.py:91} INFO - Job 548: Subtask extrair
+[2024-10-02T17:30:54.280+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [running]> on host 99de7dfc3871
+[2024-10-02T17:30:54.361+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_covid_europa_pipeline' AIRFLOW_CTX_TASK_ID='extrair' AIRFLOW_CTX_EXECUTION_DATE='2024-08-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-03T00:00:00+00:00'
+[2024-10-02T17:30:54.362+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T17:31:00.199+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-02T17:31:00.199+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T17:31:00.207+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_covid_europa_pipeline, task_id=extrair, run_id=scheduled__2024-08-03T00:00:00+00:00, execution_date=20240803T000000, start_date=20241002T173054, end_date=20241002T173100
+[2024-10-02T17:31:00.261+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-02T17:31:00.278+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T17:31:00.280+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-02T18:54:45.891+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T18:54:45.918+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [queued]>
+[2024-10-02T18:54:46.108+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [queued]>
+[2024-10-02T18:54:46.109+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T18:54:46.152+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extrair> on 2024-08-03 00:00:00+00:00
+[2024-10-02T18:54:46.159+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=4634) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T18:54:46.161+0000] {standard_task_runner.py:63} INFO - Started process 4659 to run task
+[2024-10-02T18:54:46.161+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_covid_europa_pipeline', 'extrair', 'scheduled__2024-08-03T00:00:00+00:00', '--job-id', '777', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpoweagc6x']
+[2024-10-02T18:54:46.162+0000] {standard_task_runner.py:91} INFO - Job 777: Subtask extrair
+[2024-10-02T18:54:46.215+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [running]> on host 99de7dfc3871
+[2024-10-02T18:54:46.312+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_covid_europa_pipeline' AIRFLOW_CTX_TASK_ID='extrair' AIRFLOW_CTX_EXECUTION_DATE='2024-08-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-03T00:00:00+00:00'
+[2024-10-02T18:54:46.317+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T18:54:51.736+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-02T18:54:51.736+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T18:54:51.745+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_covid_europa_pipeline, task_id=extrair, run_id=scheduled__2024-08-03T00:00:00+00:00, execution_date=20240803T000000, start_date=20241002T185445, end_date=20241002T185451
+[2024-10-02T18:54:51.781+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-02T18:54:51.818+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T18:54:51.820+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-02T19:03:41.996+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T19:03:42.200+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [queued]>
+[2024-10-02T19:03:42.209+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [queued]>
+[2024-10-02T19:03:42.209+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T19:03:42.227+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extrair> on 2024-08-03 00:00:00+00:00
+[2024-10-02T19:03:42.235+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7926) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T19:03:42.236+0000] {standard_task_runner.py:63} INFO - Started process 7940 to run task
+[2024-10-02T19:03:42.236+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_covid_europa_pipeline', 'extrair', 'scheduled__2024-08-03T00:00:00+00:00', '--job-id', '1832', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmp40edmbdi']
+[2024-10-02T19:03:42.239+0000] {standard_task_runner.py:91} INFO - Job 1832: Subtask extrair
+[2024-10-02T19:03:42.285+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_covid_europa_pipeline.extrair scheduled__2024-08-03T00:00:00+00:00 [running]> on host 99de7dfc3871
+[2024-10-02T19:03:42.386+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_covid_europa_pipeline' AIRFLOW_CTX_TASK_ID='extrair' AIRFLOW_CTX_EXECUTION_DATE='2024-08-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-03T00:00:00+00:00'
+[2024-10-02T19:03:42.387+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T19:03:48.205+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-02T19:03:48.206+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T19:03:48.217+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_covid_europa_pipeline, task_id=extrair, run_id=scheduled__2024-08-03T00:00:00+00:00, execution_date=20240803T000000, start_date=20241002T190342, end_date=20241002T190348
+[2024-10-02T19:03:48.257+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-02T19:03:48.296+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T19:03:48.300+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

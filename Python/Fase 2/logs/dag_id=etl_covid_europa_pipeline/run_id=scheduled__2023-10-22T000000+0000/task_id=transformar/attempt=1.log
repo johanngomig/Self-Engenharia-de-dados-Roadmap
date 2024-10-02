@@ -1,0 +1,89 @@
+[2024-10-02T17:25:33.580+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T17:25:33.628+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [queued]>
+[2024-10-02T17:25:33.650+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [queued]>
+[2024-10-02T17:25:33.655+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T17:25:33.938+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transformar> on 2023-10-22 00:00:00+00:00
+[2024-10-02T17:25:33.951+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1324) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T17:25:33.954+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_covid_europa_pipeline', 'transformar', 'scheduled__2023-10-22T00:00:00+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpsp1sjjxe']
+[2024-10-02T17:25:33.963+0000] {standard_task_runner.py:91} INFO - Job 59: Subtask transformar
+[2024-10-02T17:25:33.954+0000] {standard_task_runner.py:63} INFO - Started process 1338 to run task
+[2024-10-02T17:25:34.030+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [running]> on host 99de7dfc3871
+[2024-10-02T17:25:34.136+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_covid_europa_pipeline' AIRFLOW_CTX_TASK_ID='transformar' AIRFLOW_CTX_EXECUTION_DATE='2023-10-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-22T00:00:00+00:00'
+[2024-10-02T17:25:34.138+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T17:25:34.297+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T17:25:34.298+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/etl_pipeline.py", line 17, in transformar
+    df_agrupada = df.groupby('ContinentExp')[['cases', 'deaths']].sum().reset_index()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/frame.py", line 8869, in groupby
+    return DataFrameGroupBy(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1278, in __init__
+    grouper, exclusions, obj = get_grouper(
+                               ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/groupby/grouper.py", line 1009, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'ContinentExp'
+[2024-10-02T17:25:34.314+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=etl_covid_europa_pipeline, task_id=transformar, run_id=scheduled__2023-10-22T00:00:00+00:00, execution_date=20231022T000000, start_date=20241002T172533, end_date=20241002T172534
+[2024-10-02T17:25:34.328+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 59 for task transformar ('ContinentExp'; 1338)
+[2024-10-02T17:25:34.347+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-02T17:25:34.373+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T17:25:34.378+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-02T18:57:34.428+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T18:57:34.467+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [queued]>
+[2024-10-02T18:57:34.754+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [queued]>
+[2024-10-02T18:57:34.755+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T18:57:34.784+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transformar> on 2023-10-22 00:00:00+00:00
+[2024-10-02T18:57:34.797+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=5458) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T18:57:34.799+0000] {standard_task_runner.py:63} INFO - Started process 5475 to run task
+[2024-10-02T18:57:34.799+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_covid_europa_pipeline', 'transformar', 'scheduled__2023-10-22T00:00:00+00:00', '--job-id', '1039', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmp6jjtw270']
+[2024-10-02T18:57:34.802+0000] {standard_task_runner.py:91} INFO - Job 1039: Subtask transformar
+[2024-10-02T18:57:34.858+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [running]> on host 99de7dfc3871
+[2024-10-02T18:57:34.970+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_covid_europa_pipeline' AIRFLOW_CTX_TASK_ID='transformar' AIRFLOW_CTX_EXECUTION_DATE='2023-10-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-22T00:00:00+00:00'
+[2024-10-02T18:57:34.974+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T18:57:35.115+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-02T18:57:35.116+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T18:57:35.124+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_covid_europa_pipeline, task_id=transformar, run_id=scheduled__2023-10-22T00:00:00+00:00, execution_date=20231022T000000, start_date=20241002T185734, end_date=20241002T185735
+[2024-10-02T18:57:35.176+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-02T18:57:35.196+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T18:57:35.199+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-02T19:23:45.532+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-02T19:23:45.569+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [queued]>
+[2024-10-02T19:23:45.581+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [queued]>
+[2024-10-02T19:23:45.582+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-02T19:23:45.855+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transformar> on 2023-10-22 00:00:00+00:00
+[2024-10-02T19:23:45.863+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=8811) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-02T19:23:45.865+0000] {standard_task_runner.py:63} INFO - Started process 8832 to run task
+[2024-10-02T19:23:45.866+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_covid_europa_pipeline', 'transformar', 'scheduled__2023-10-22T00:00:00+00:00', '--job-id', '2042', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpovcppkje']
+[2024-10-02T19:23:45.869+0000] {standard_task_runner.py:91} INFO - Job 2042: Subtask transformar
+[2024-10-02T19:23:45.931+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_covid_europa_pipeline.transformar scheduled__2023-10-22T00:00:00+00:00 [running]> on host 99de7dfc3871
+[2024-10-02T19:23:46.046+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_covid_europa_pipeline' AIRFLOW_CTX_TASK_ID='transformar' AIRFLOW_CTX_EXECUTION_DATE='2023-10-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-22T00:00:00+00:00'
+[2024-10-02T19:23:46.050+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-02T19:23:46.321+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-02T19:23:46.324+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-02T19:23:46.337+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_covid_europa_pipeline, task_id=transformar, run_id=scheduled__2023-10-22T00:00:00+00:00, execution_date=20231022T000000, start_date=20241002T192345, end_date=20241002T192346
+[2024-10-02T19:23:46.449+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-02T19:23:46.473+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-02T19:23:46.475+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
