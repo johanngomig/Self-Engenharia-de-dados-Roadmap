@@ -1,6 +1,6 @@
 # Self-Engenharia-de-dados-Roadmap
 
-#### Fase 1: **Fundamentos de SQL e Python**
+#### Fase 1: **[Fundamentos de SQL](https://github.com/johanngomig/Self-Engenharia-de-dados-Roadmap/tree/main/Query-SQL) e [Python](https://github.com/johanngomig/Self-Engenharia-de-dados-Roadmap/tree/main/Python/Fase%201)**
 Objetivo: Dominar o SQL e manipulação de dados em Python.
 
 **SQL:**
