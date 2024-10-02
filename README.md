@@ -8,7 +8,6 @@ Objetivo: Dominar o SQL e manipulação de dados em Python.
    - Revisão de joins: INNER, OUTER, LEFT, RIGHT.
    - Exercícios práticos sobre **funções de agregação** avançadas (ex: HAVING, COUNT DISTINCT).
    - **CTEs e Subqueries**: prática com consultas aninhadas e uso de expressões comuns.
-   - **Ferramenta**: Usar **DB Fiddle** (gratuito) para executar consultas SQL online.
 
 **Exercício**:
 - Criar um banco de dados simulado com diferentes tabelas e praticar os joins entre elas.
@@ -19,10 +18,9 @@ Objetivo: Dominar o SQL e manipulação de dados em Python.
    - Foco em operações com DataFrames: filtragem, agregação e limpeza de dados.
    - Estruturas de dados: listas, dicionários e arrays multidimensionais.
    - Introdução ao **NumPy** para operações numéricas.
-   - **Ferramenta**: Usar **Google Colab** (gratuito) para rodar scripts Python sem necessidade de instalação.
 
 **Exercício**:
-- Carregar um dataset público (ex: dados do **Kaggle**).
+- Carregar um dataset público.
 - Realizar operações de limpeza, agregação e geração de insights a partir dos dados.
 
 ---
@@ -34,14 +32,12 @@ Objetivo: Construir pipelines de dados e entender a modelagem de sistemas.
 1. **Introdução ao Apache Airflow**:
    - Conceito de orquestração de pipelines.
    - Criar e agendar pipelines simples.
-   - **Ferramenta**: Instalar o **Apache Airflow** em um ambiente local ou usar a versão gratuita disponível no **Astronomer Cloud**.
 
 2. **ETL/ELT**:
    - Criar um pipeline ETL usando Python e pandas.
-   - Ferramenta para agendamento e execução: **Airflow**.
 
 **Exercício**:
-- Criar um pipeline de ETL que extrai dados de um CSV, transforma-os e armazena o resultado em uma base de dados simulada (ex: SQLite).
+- Criar um pipeline de ETL que extrai dados de um CSV, transforma-os e armazena o resultado em uma base de dados simulada.
 
 **Modelagem de Dados**:
 1. **Teoria sobre Modelagem de Dados**:
@@ -60,7 +56,6 @@ Objetivo: Trabalhar com grandes volumes de dados e processamento em tempo real.
 1. **Introdução ao Apache Spark**:
    - Fundamentos do processamento distribuído.
    - Implementar processamento em batch e streaming com **PySpark**.
-   - **Ferramenta**: Usar o ambiente gratuito **Databricks Community Edition**.
 
 **Exercício**:
 - Carregar um grande dataset no Databricks e realizar operações de processamento em batch com **PySpark**.
