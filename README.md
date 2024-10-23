@@ -25,7 +25,7 @@ Objetivo: Dominar o SQL e manipulação de dados em Python.
 
 ---
 
-#### Fase 2: **Data Pipelines e Modelagem de Dados**
+#### Fase 2: **[Data Pipelines e Modelagem de Dados](https://github.com/johanngomig/Self-Engenharia-de-dados-Roadmap/tree/main/Python/Fase%202)**
 Objetivo: Construir pipelines de dados e entender a modelagem de sistemas.
 
 **Data Pipelines**:
